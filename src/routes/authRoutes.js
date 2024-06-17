@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const authController = require('../controllers/backend/authController');
-const loadAppHtml = require('../utils/loadAppHtml');
 
 // Ruta para mostrar el formulario de login
 router.get('/login', (req, res) => {

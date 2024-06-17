@@ -15,5 +15,5 @@
         "mysql": "^2.18.1"
     },
     "author": "Ignacio Suazo <i.suazo7@alumnos.santotomas.cl>",
-    "license": "Fan Works License"
+    "license": "MIT"
 }

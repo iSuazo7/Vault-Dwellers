@@ -8,12 +8,12 @@ async function getProductosController(req, res){
         if (productos.length === 0) {
             return res.status(404).send('No se encontraron productos en la base de datos.');
         }
-        let jsonData = JSON.stringify(productos.map(producto => ({ 
+        let jsonData = JSON.stringify(productos.map(producto => ({ //map sirve para recorrer un array. Similar a un forEach
             nombre: producto.nombre,
             valor: producto.valor
         })));
         jsonData = JSON.parse(jsonData);
-        // console.log(jsonData);
+        // console.log(jsonData); //Para testing. Borrar luego
         return jsonData;
     } catch (error) {
         console.error('Error obteniendo productos: ', error);
