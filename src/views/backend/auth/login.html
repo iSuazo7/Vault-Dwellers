@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/backend/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
-    <section>
-        <h3>Login</h3>
-        <div>
-            <p>
-                Ingrese sus credenciales
-            </p>
-        </div>
-        <div>
+    <section id="login-container">
+        <div class="overlay"></div>
+        <img src="../assets/backend/imgs/scanlines.png" id="scan" alt="scanline-effect-image">
+        <img src="../assets/backend/imgs/tv.png" id="tv" alt="tv-effect-image">
+        <div id="content">
             <form id="formLogin">
+                <h3>Login</h3>
+                <div>
+                    <p>
+                        Ingrese sus credenciales
+                    </p>
+                </div>
                 <div>
                     <label for="">
                         Email:
@@ -33,7 +40,7 @@
                     <input type="submit" name="entrar" value="Entrar">
                 </div>
             </form>
-            <div id="mensajeError"></div> <!-- Contenedor para mensajes de error -->
+            <!-- <div id="mensajeError"></div> Contenedor para mensajes de error -->
         </div>
     </section>
     <script src="/assets/backend/js/app.js"></script>

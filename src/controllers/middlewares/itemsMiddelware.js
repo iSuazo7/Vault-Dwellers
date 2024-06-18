@@ -19,7 +19,7 @@ async function itemsCargar(req, res){
 }
 
 async function indexCargar(req, res){
-    const body = `<div class="index">
+    const body = `<div class="index-wrapper">
                     <h2>VAULT-TEC</h2>
                     <h3>Preparate para el futuro</h3>
                     <p>El mundo es peligroso, pero no tiene por qué serlo. Duerme tranquilo sabiendo que tu familia está en las buenas manos de Vault-Tec</p>
@@ -29,7 +29,7 @@ async function indexCargar(req, res){
 }
 
 async function nosotrosCargar(req, res){
-    const body = `<div class="nosotros">
+    const body = `<div class="nosotros-wrapper">
                     <h2>VAULT-TEC: Preservando a la humanidad, un refugio a la vez.</h2>  
                     <p>
                        Bienvenido a Vault-Tec, el líder mundial en refugios subterraneos

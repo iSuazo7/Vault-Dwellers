@@ -33,9 +33,9 @@ class DataBase {
     }
     
     // Método para ejecutar consultas SQL
-    async ejecutarQuery(query, params) {
+    async ejecutarQuery(query) {
         return new Promise((resolve, reject) => {
-            this.conexion.query(query, params, (error, results) => {
+            this.conexion.query(query, (error, results) => {
                 if (error) {
                     reject(error);
                 } else {
@@ -44,9 +44,9 @@ class DataBase {
             });
         });
     }
-    async ejecutarQuery(query) {
+    async ejecutarQuery(query, params) {
         return new Promise((resolve, reject) => {
-            this.conexion.query(query, (error, results) => {
+            this.conexion.query(query, params, (error, results) => {
                 if (error) {
                     reject(error);
                 } else {

@@ -20,4 +20,19 @@ async function getProductosController(req, res){
         res.status(500).send('Error interno del servidor');
     }
 };
-module.exports = {getProductosController}
+
+async function agregarProductos(req, res){
+    try {
+        const productoModel = new Producto();
+        const {nombre, valor} = req.body;
+        await productoModel.ingresarProductos(nombre, valor);
+        res.status(200).send('Productos agregados con exito');
+    } catch (error) {
+        res.status(500).send('Error agregando el producto: ', error);
+    }
+}
+
+module.exports = {
+    getProductosController,
+    agregarProductos
+}
