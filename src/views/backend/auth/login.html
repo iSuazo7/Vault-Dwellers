@@ -10,34 +10,35 @@
     <title>Login</title>
 </head>
 <body>
+    <div class="overlay"></div>
+    <div class="scanline"></div>
     <section id="login-container">
-        <div class="overlay"></div>
         <img src="../assets/backend/imgs/scanlines.png" id="scan" alt="scanline-effect-image">
         <img src="../assets/backend/imgs/tv.png" id="tv" alt="tv-effect-image">
         <div id="content">
             <form id="formLogin">
-                <h3>Login</h3>
+                <h3>LOGIN</h3>
                 <div>
                     <p>
-                        Ingrese sus credenciales
+                        INGRESE SUS CREDENCIALES
                     </p>
                 </div>
                 <div>
-                    <label for="">
-                        Email:
+                    <label id="lblEmail" for="">
+                        EMAIL >>
                     </label>
                 </div>
                 <div>
                     <input type="email" id="correo" name="correo" placeholder="example@example.cl" required>
                 </div>
                 <div>
-                    <label for="">Clave:</label>
+                    <label for="">CLAVE >></label>
                 </div>
                 <div>
                     <input type="password" id="clave" name="clave" placeholder="Tu Clave Aquí" required>
                 </div>
                 <div>
-                    <input type="submit" name="entrar" value="Entrar">
+                    <input type="submit" name="entrar" value="ENTRAR">
                 </div>
             </form>
             <!-- <div id="mensajeError"></div> Contenedor para mensajes de error -->
