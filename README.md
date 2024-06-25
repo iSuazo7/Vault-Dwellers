@@ -20,8 +20,8 @@ Sigue estos pasos para instalar el proyecto en tu entorno local:
 1. **Clonar el repositorio:**
 
 ```sh
-git clone https://github.com/alkemistin/proyecto-web-santotomas.git
-cd proyecto-web-santotomas
+git clone https://github.com/iSuazo7/Vault-Dwellers.git
+cd Vault-Dwellers
 ```
 2. **Instalación de Dependencias:**
 
