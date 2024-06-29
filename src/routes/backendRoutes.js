@@ -4,19 +4,23 @@ const loadAppHtml = require('../utils/loadAppHtml');
 const authMiddleware = require('../controllers/middlewares/authMiddleware'); // Importa el middleware
 const dashboardMiddleware = require('../controllers/middlewares/dashboardMiddleware');
 const productosController = require('../controllers/backend/productosController');
+const {listarProductos, editarProducto, guardarEdicion} = require('../controllers/backend/productosController');
 
 const tipo_plantilla = 'backend';
 
-// router.get('/dashboard', authMiddleware, (req, res) => {
-//     loadAppHtml(tipo_plantilla, 'dashboard', `${process.env.APP_NAME}: Dashboard`, 'Bienvenido al panel de administración', res);
-// });
+//TODO: acortar los enrutadores, similar a como esta el modulo de listar refugios
 
 router.get('/dashboard', authMiddleware, (req, res) => {
     dashboardMiddleware.dashboardFormulario(req, res);
 });
-router.post('/form-endpoint', authMiddleware, (req,res) => {
-    productosController.agregarProductos(req, res);
-});
+// router.post('/form-endpoint', authMiddleware, (req,res) => {
+//     productosController.agregarProductos(req, res);
+// });
+
+router.get('/modulo-listar-refugios', authMiddleware, listarProductos);
+router.get('/modulo-editar-refugio/:id', authMiddleware, editarProducto);
+router.post('/modulo-editar-refugio', authMiddleware, guardarEdicion);
+
 
 router.get('/modulo-usuarios', authMiddleware, (req, res) => {
     loadAppHtml(tipo_plantilla, 'usuarios', `${process.env.APP_NAME}: Módulo Usuarios`, 'Gestión de usuarios', res);
